@@ -96,13 +96,13 @@ else
     {
         if (string.IsNullOrWhiteSpace(Spend!.Description))
         {
-            await JSRuntime.InvokeAsync<bool>("Alert", "Description cannot be empty.");
+            await JSRuntime.InvokeAsync<bool>("alert", "Description cannot be empty.");
             return;
         }
 
         if (Spend.Value <= 0)
         {
-            await JSRuntime.InvokeAsync<bool>("Alert", "Value must be greater than zero.");
+            await JSRuntime.InvokeAsync<bool>("alert", "Value must be greater than zero.");
             return;
         }
 
